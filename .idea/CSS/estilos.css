@@ -1,3 +1,5 @@
+*{ box-sizing: border-box; }
+
 nav {
     position: fixed;
     top: 0;
