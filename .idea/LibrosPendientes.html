@@ -24,18 +24,126 @@
 
     <main>
 
-        <section>
-            <article>
-                <h2>Magnolia Parks</h2>
-                <p>Da nombre al primer libro de una saga escrita por <strong>Jessa Hastings</strong> que trata sobre una socialité londinense y su compleja relación con el chico "chico malo"</p>
-                <p> La historia se central en la tóxica relación</p>
+        <article>
+            <h2>Tabla de Libros de mi Wishlist</h2>
+            <p></p>
+            <p></p>
+            <section>
+                <!-- Creación de la tabla para los libros pendientes -->
+                <table border = "1" class="tabla_libros_pendientes">
+                    <tbody>
+                    <tr>
+                        <td>Título del Libro</td>
+                        <td>Autora</td>
+                        <td>Descripción</td>
+                        <td>Temática</td>
+                    </tr>
+                    <tr>
+                        <td>La asistenta</td>
+                        <td colspan="2" rowspan="2"> Estos dos libros son los primeros de una colección de la autora <em>Freida McFadden</em> Trata de una mujer que acepta UN trabajo como asistena doméstica para una familia, en una mansión de lujo donde todo parece perfecto desde fuera. Ella de encarga de la niña, de limpiar mientras que vive en una pequeña habitación del desván. Pero pronto descubre que detrás de la fachada hay mentiras y secretos.</td>
+                        <td rowspan="2">Thriller</td>
+                    </tr>
+                    <tr>
+                        <td>El secreto de la Asistenta</td>
+                    </tr>
+                    <tr>
+                        <td>Daisy haites: La gran libreración</td>
+                        <td><em>Jessa Hastings</em></td>
+                        <td>Es el cuarto libro del universo de Magnolia parks. Continua con la historia de Daise Haites quien creía haber dejado su pasado atrás, pero cuando su vida vuelve a estar en peligro, se ve involucrada con Julian, hermano de alguien importante,  también la historia de Magnolia Parks entra en juego</td>
+                        <td>Romance Contemporaneo</td>
+                    </tr>
+                    <tr>
+                        <td>Trono de cristal</td>
+                        <td><em>Sarah J. Maas</em></td>
+                        <td>Es el primer librode la saga de homónima, donde habla de Celaena Sardothien, una joven asecina con un pasado oscuro que llevaba antes el rey competir por un puesto como su campeona. La historia combina <strong>fantasía, acción y un poco de romance</strong> en un mundo con reinos, intrigas y magia.</td>
+                        <td rowspan="2">Fantasía</td>
+                    </tr>
+                    <tr>
+                        <td>Islas de la Ascuaoscura</td>
+                        <td><em>Brandon Sanderson</em></td>
+                        <td>Se ambienta en el universo Cosmere de Sanderso, dentro de Reini Cognitivo, un rincón desconocido y mesterioso. Los protagonistas principales son Starling y Ocaso que se embarcan en una misión que les lleva más allá de lo que creían posible.</td>
+                    </tr>
+                    <tr>
+                        <td>Tan poca vida</td>
+                        <td><em>Hanya Yanagihara</em></td>
+                        <td>La novela sigue a cuatro amigos que se conocen en la universidad y cuya amistad perdura durante décadas en Nueva York. Es una historia que explora la amistad, el amor, el trauma, la autodestrucción y la resiliencia</td>
+                        <td>Drama</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
 
-                <section>
-                    <h3>Comentarios del artículo</h3>
-                <!-- ... -->
-                </section>
-            </article>
-        </section>
+        <article>
+            <h2>Formulario</h2>
+            <p></p>
+            <section>
+                <form>
+                    <!-- Pedir el correo obligatorio -->
+                    <fieldset>
+                        <legend><strong>Correo Electrónico</strong></legend>
+                        <label for="email">Introduzca su correo</label> <br>
+                        <input type="email" id="email" name="email_usuario" required placeholder="ejemplo@correo.com">
+                    </fieldset>
+                    <!-- Pedir fecha de nacimiento -->
+                    <fieldset>
+                        <legend><strong>Fecha de Nacimiento</strong></legend>
+                        <label for="fechaNacimiento">Introduzca su fecha de nacimiento</label> <br>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                    </fieldset>
+                    <!-- Pedimos la contraseña de forma opcional -->
+                    <fieldset>
+                        <legend><strong>Contraseña (Opcional)</strong></legend>
+                        <label for="contraseña">Introduzla la contraseña de 4 dígitos</label> <br>
+                        <input type="password" id="contraseña" name="contraseña_patron"  pattern="[0-4]+" autocomplete="number" min="1" max="10">
+                    </fieldset>
+                    <!-- Temática del libro -->
+                    <fieldset>
+                        <legend>Temática del libro</legend>
+                        <p>Seleción la categoría del libro que quieras recomendar</p>
+                        <select>
+                            <option>Romantica</option>
+                            <option>Fantasía</option>
+                            <option>Thriller</option>
+                            <option>Desarrollo Personal</option>
+                            <option>Drama</option>
+                        </select>
+                    </fieldset>
+                    <!-- Titulo del libro -->
+                    <fieldset>
+                        <legend>Tituo del libro</legend>
+                        <p>Escribe el nombre del libro</p>
+                        <label>Título</label> <br>
+                        <input type="text" id="titulo_del_libro" required placeholder="Escribe aquí el título" >
+                    </fieldset>
+                    <!-- Descripción del Libro -->
+                    <fieldset>
+                        <legend>Cuentame un poco sobre el libro</legend>
+                        <label for="texto_resumen">Describe de que trata el libro y porque me lo recomiendas</label>
+                        <pre></pre>
+                        <textarea id="texto_resumen" name="texto_resumen" rows="7" required placeholder="Escribe aquí el texto" ></textarea>
+                    </fieldset>
+                    <!-- Numero de libro en caso de que sea saga -->
+                    <fieldset>
+                        <legend>Numero de Libros</legend>
+                        <p>En caso de que sea una Saga, una troligía o tenga mas de un libro. Indique cuantos.</p>
+                        <label>Numero de Libros</label> <br>
+                        <input type="number" id="numero_de_libros" autocomplete="number" min="1" max="10">
+                    </fieldset>
+                    <!-- Aceptación de termines, debe de ser obligatoria-->
+                    <fieldset>
+                        <legend><strong>Acepto de Términos</strong></legend>
+                        <input type="checkbox" id="terminos" name="revisión_del_sistema" required value="Acepto">
+                        <label for="terminos">Acepto</label>
+                    </fieldset>
+                    <!--botón de envío -->
+                    <fieldset>
+                        <legend><strong>Envio de formulario</strong></legend>
+                        <input type="submit" required value="Enviar">
+                    </fieldset>
+                </form>
+            </section>
+        </article>
 
 
         <aside>
