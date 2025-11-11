@@ -1,5 +1,6 @@
 *{ box-sizing: border-box; }
-/* CSS del indice de arriba */
+
+/* ======= INDICE ====== */
 nav {
     position: fixed;
     top: 0;
@@ -43,4 +44,71 @@ nav ul li a {
 nav ul :hover {
 /* Lo usamos para ponerle color al bloque cuando pasamos el botón por arubba */
     background-color: #f48989;
+}
+/* ====== FIN DE INCIDE ====== */
+
+/* ====== BODY ======== */
+
+/* ------BODY------- */
+body{
+    font-family: Arial, sans-serif;
+    background-color: #d8fad8;
+}
+/* ----- HEADER ------ */
+header {
+    height: 70px;
+    margin-top: 90px;
+/* Para ponerlo en el centro */
+    text-align: center;
+/* Para hacerlo mas grande */
+    font-size: 35px;
+}
+
+/* ----- CONTENEDOR DE ARTICULOS Y ASIDE PARA PONERLOS EN COLUMNA ------ */
+main {
+    display: grid;
+    /* Define 2 columnas: la 1ª (3fr) es 3 veces más grande que la 2ª (1fr) */
+    grid-template-columns: 3fr 1fr;
+/* Para darle el espacio entre las columnas */
+    gap: 20px;
+    /* Añadimos padding para que el <nav> fijo no tape el contenido */
+    padding-top: 80px;
+}
+
+article {
+    background-color: #eaffea;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 2%;
+}
+
+aside {
+    background-color: #eaffea;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 2%;
+}
+
+/* -----COLOCACIÓN DE LOS LIRBOS EN DIFERENTES POSICIONES CON LAS FOTOS----- */
+
+/* SAGA EMPIREO */
+section.SagaEmpireo {
+    /*Lo coloca en linea horizontal*/
+    display: flex;
+    /*Alinea la parte superior de la imagen y el texto*/
+    align-items: flex-start;
+    /*Espacio entre la imagen y el texto*/
+    gap: 20px;
+    margin: 20px o;
+}
+section.libro img {
+    /*Ajusta el tamaño de la imagen*/
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+section.libro ul {
+    list-style-type: none;      /* Quita los puntos de la lista (opcional) */
+    padding: 0;
+    max-width: 600px;           /* Controla el ancho del texto */
 }
