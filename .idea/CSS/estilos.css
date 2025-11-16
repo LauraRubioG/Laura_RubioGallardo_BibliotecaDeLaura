@@ -210,3 +210,12 @@ table td{
     color: #353B3C;
     padding: 3px;
 }
+
+/* -----FORMULARIO----- */
+form input{
+    background-color: #C6C7C4;
+    border: none;
+    padding: 0.25rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
