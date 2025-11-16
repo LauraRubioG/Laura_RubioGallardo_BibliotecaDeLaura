@@ -57,6 +57,11 @@ header {
 /* Para hacerlo mas grande */
     font-size: 35px;
     color: #eef0f2;
+    /* Para font de google */
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 /* ----- CONTENEDOR DE ARTICULOS Y ASIDE PARA PONERLOS EN COLUMNA ------ */
@@ -196,6 +201,7 @@ table{
     width: 100%;
     border-collapse: collapse;
     border: 3px solid #353B3C;
+    vertical-align: center;
 
 
 }
@@ -212,10 +218,40 @@ table td{
 }
 
 /* -----FORMULARIO----- */
-form input{
+section.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: "Arial Nova Light";
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* para quitarle el margin predeterminado */
+section.formulario>*{
+    margin: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form fieldset{
+    background-color: rgba(165, 42, 42, 0.26);
+    border-radius: 5px;
+}
+
+form input,textarea,select{
     background-color: #C6C7C4;
     border: none;
     padding: 0.25rem 1rem;
     border-radius: 5px;
     text-align: center;
+}
+form legend{
+    /* Para arreglar todos los strong */
+    font-weight: bold;
 }
