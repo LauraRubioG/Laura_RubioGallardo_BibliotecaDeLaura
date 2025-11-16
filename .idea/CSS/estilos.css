@@ -1,50 +1,41 @@
-*{ box-sizing: border-box; }
+*{ box-sizing: border-box;}
 
 /* ======= INDICE ====== */
-nav {
+
+nav{
     position: fixed;
     top: 0;
     left: 0;
+    background-color: antiquewhite;
     width: 100%;
-    background-color: #a8cef4;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+    height: 60px;
 }
-/* CSS para la lista en general del indice */
-nav ul {
-/* Quita los puntos o viñetas que aparecen por defecto */
-    list-style-type: none;
-/* Centra todo el contenido de la lista, es decir todos los <li> que tengamos */
-    text-align: center;
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    height: 100%;
 }
-
-/* CSS para los apartados de las listas de la lista del indice */
-nav ul li {
-/* Esta etiqueta hace que ponga el indice en el linea con el inline-block */
-    display: inline-block;
-/* Le da la separación que hay entre medio de las li, es decir de los indices en si */
-    margin: 0 25px;
-/* Cambia el cursor a forma de mano para saber que es pulsable */
+nav ul li{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    padding: 1rem;
     cursor: pointer;
 }
-
-nav ul li a {
-/* Quita el subrayado que se pone por defecto */
+nav ul li a{
     text-decoration: none;
-/* Le da color a las letras de los enunciados */
-    color: #000000;
-/* Le pone forma a las letras, en negrita en ese caso */
-    font-weight: bold;
-/* Separacion que hay, si marcamos en inspeccionar vemos el cuadro que tocamos */
-    margin: 0px;
-/* Separacion con el margen del bloque de los textos */
-    padding: 15px;
+    color: black;
+}
+nav ul li:hover{
+    background-color: #db7c7c;
 }
 
-nav ul :hover {
-/* Lo usamos para ponerle color al bloque cuando pasamos el botón por arubba */
-    background-color: #f48989;
-}
 /* ====== FIN DE INCIDE ====== */
 
 /* ====== BODY ======== */
@@ -106,6 +97,8 @@ section.libro img {
     width: 200px;
     height: auto;
     border-radius: 8px;
+    /* Para quitarle el fondo blanco a la imagen */
+    mix-blend-mode: darken;
 }
 section.libro ul {
     list-style-type: none;      /* Quita los puntos de la lista (opcional) */
