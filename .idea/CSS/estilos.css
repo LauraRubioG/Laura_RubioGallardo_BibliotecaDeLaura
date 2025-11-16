@@ -181,3 +181,23 @@ section.LosBridgerton {
     /*Ajusta el tamaño de la imagen*/
     mix-blend-mode:multiply;
 }
+
+/* -----TABLA----- */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid #353B3C;
+
+
+}
+table th{
+    background-color: #A2999E;
+    color: #353B3C;
+    border: 3px solid #353B3C;
+    padding: 10px;
+}
+table td{
+    background-color: #C6C7C4;
+    color: #353B3C;
+    padding: 3px;
+}
