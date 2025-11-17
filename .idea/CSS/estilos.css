@@ -142,6 +142,14 @@ section.noticias section{
     width: 100%;
     color: #353B3C;
 }
+summary{
+    background-color: #C6C7C4;
+    border-radius: 10px;
+    padding: 10px;
+    color: #353B3C;
+    background-color: rgba(238, 240, 242, 0.66);
+    box-shadow: 0 4px 14px 11px #f5f5f51f;
+}
 
 /* ----- PÁGINA DE lIBBROS LEIDOS------ */
 
@@ -211,7 +219,22 @@ table th{
     border: 3px solid #353B3C;
     padding: 10px;
 }
-table td{
+/*table td{
+    background-color: #C6C7C4;
+    color: #353B3C;
+    padding: 3px;
+}*/
+table tr:nth-child(odd){
+    background-color: #9a9a99;
+    color: #353B3C;
+    padding: 3px;
+}
+table tr:nth-child(even){
+    background-color: #C6C7C4;
+    color: #353B3C;
+    padding: 3px;
+}
+td.parablanco{
     background-color: #C6C7C4;
     color: #353B3C;
     padding: 3px;
@@ -254,4 +277,17 @@ form input,textarea,select{
 form legend{
     /* Para arreglar todos los strong */
     font-weight: bold;
+}
+
+/* -----Footer----- */
+footer{
+    background-color: #A2999E;
+    padding: 3px;
+    border-radius: 8px;
+}
+footer p{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0.5;
 }
